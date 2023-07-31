@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PKL-CSA</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/x-icon" href="img/pkl-csa.jpg">
+    
+</head>
+<body>
+    <section>
+    <link rel="stylesheet" href="css/sidebar.css">
+
+    <section id="sidebar">
+        <a href="index.html"><img src="img/navlogo.png" class="navlogo"></a>
+        <div class="sidebar-content">
+            <ul>
+                <li><a href="index.html"><img src="img/home.png" class="navimg">Home</a></li>
+                <li><a href="about-us.html"><img src="img/about-us.png" class="navimg">About Us</a></li>
+                <li><a href="contact.html"><img src="img/contact.png" class="navimg">Contact</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contentPart">
+        <div class="content-wrapper">
+            <!-- Content Section 1 -->
+            <div class="content-container">
+                <!-- Your content for the first section goes here -->
+                <h1>What is PKL?</h1>
+                <p>PKL or Philippine Karatedo League Inc. is a Karate organization that is composed of different styles 
+                and was formed many years ago by PKL <a href="#">Shihan Dennis Q. Aquino</a>, the founder of PKL. 
+                It is one of the largest Karate organizations of the country with thousands of members. PKL also have 
+                branches outside the country (international) and continuing the advocate through Karate sport.
+                </p>
+            </div>
+
+            <!-- Content Section 2 -->
+            <div class="content-container">
+                <!-- Your content for the second section goes here -->
+                <h1>Section 2</h1>
+                <p>This is the content of Section 2.</p>
+            </div>
+        </div>
+
+        <!-- Calendar of Activity Container -->
+        <div class="calendar-container">
+            <!-- Your content for the calendar of activity container goes here -->
+            <h1>Calendar of Activity</h1>
+            <p>This is the content of the Calendar of Activity container.</p>
+        </div>
+    </section>
+
+<footer>
+    <p class="faqText">Have questions? Reach out to us <span><a href="#" class="faqLink">Here</a></span>!</p>
+</footer>
+
+<script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleMenu() {
+      var x = document.getElementById("sidebar");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+
+</body>
+</html>
