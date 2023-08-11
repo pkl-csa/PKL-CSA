@@ -1,0 +1,276 @@
+@font-face {
+    font-family: "BSansL";
+    src: url(fonts/BloggerSans-LightItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "BSansM";
+    src: url(fonts/BloggerSans-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "GBook";
+    src: url(fonts/Garet-Book.ttf) format("truetype");
+}
+@font-face {
+    font-family: "GHeavy";
+    src: url(fonts/Garet-Heavy.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Glacial";
+    src: url(fonts/GlacialIndifference.ttf) format("truetype");
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F8F5F5;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+#contentPart {
+    display: flex;
+    flex-wrap: wrap; /* Allow the content containers to wrap to a new line when needed */
+    align-items: flex-start; /* Align the containers to the top of the parent div */
+    position: relative;
+    justify-content: center; /* Center the containers horizontally */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+    margin: 20px;
+    padding: 30px;
+    width: 40%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 2;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.content-container .conimg {
+    width: 55%;
+    height: 35%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 2vh;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.content-container .conimg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-container p {
+    margin: 0;
+    text-align: justify;
+    text-align-last: left;
+    font-family: "GBook";
+}
+
+.content-container h1 {
+    margin: 0;
+    text-align: center;
+    font-family: "GBook";
+}
+
+.content-container ol {
+    font-family: "GBook";
+    margin-left: 6vh;
+}
+
+.content-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #C7BE65;
+    padding: 10px;
+    width: 40%;
+    font-family: "GBook";
+    border-radius: 20px;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.content-container a:hover {
+    background-color: #777246;
+    transform: scale(1.1);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; /* Center the containers horizontally */
+    align-items: center; /* Center the containers vertically */
+}
+
+@media (max-width: 768px) {
+        /* Adjust the layout for smaller screens */
+        .content-container {
+            width: 100%; /* Set the width to 100% for single column layout */
+        }
+    }
+
+.head {
+    font-size: 200%;
+    font-family: "GHeavy";
+    text-align: center;
+    margin-top: 2%;
+}
+
+.square img{
+    float: right;
+    width: 30%;
+    height: 28%;
+    margin-left: 8px;
+    border-radius: 5px;
+}
+
+.t {
+    font-family: "GHeavy";
+}
+
+.contact-info {
+    display: inline-block; /* This will make the container act like an inline element */
+    vertical-align: middle; /* This will align the container vertically with the text */
+    font-family: "GBook";
+}
+
+.contact-info img {
+    vertical-align: middle; /* This will align the image vertically within the container */
+    margin-right: 5px; /* Add some space between the image and the text */
+}
+
+.indented-text {
+    text-indent: 35px;
+}
+
+ul {
+    margin-left: 10px;
+}
+
+ul li {
+    list-style-type: none;
+    font-family: "GHeavy";
+}
+
+
+  
+  ul.main { 
+    list-style: none;
+    max-width: 75%;
+    margin: 20px auto;
+  }
+  h3 {padding: 0; margin: 0;}
+  
+  
+  .date {
+    width: 17%;
+    padding: 15% 1% 0 0 ;
+    float: left;
+  }
+  
+  .date h3 {
+    font-size: 1.5em;
+  }
+  
+  .date p {
+    font-size: .8em;
+  }
+  
+  .events {
+    float: left;
+    width: 80%;
+    border-left: 1px solid #ccc;
+    margin-top: 10%;
+    padding-top: 3%;
+  }
+  
+  .events-detail {
+    max-width: 550px;
+  }
+  
+  .events-detail li{
+    padding: 10px;
+    border-bottom: 1px dashed #ccc;
+    line-height: 22px;
+    transition: ease .4s all;
+  }
+  
+  .events-detail li:hover {
+    background: #e9e9e9;
+  }
+  
+  .event-time {
+    font-weight: 900;
+    font-size: 4vh;
+  }
+  
+  .events-detail li a {
+    text-decoration: none;
+    color: #444;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .event-location {
+      font-size: 2.6vh;
+      color: #C7BE65;
+      margin-left: 70px;
+  }
+  
+  
+  
+  @media all and (max-width: 641px) {
+      .date {
+        width: 100%;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+      }
+    
+    .events {
+      border:none;
+      width: 100%;
+      margin-top: 0;
+    }
+    
+    .events-detail {
+      padding: 0;
+    }
+    
+    li.date p {
+      margin:0;
+    }
+  }
+
+
+  .go-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 15px;
+	padding: 1em;
+	display: none;
+    font-family: "GBook";
+    transition: background-color 0.3s ease-in-out;
+}
+
+.go-top:hover {
+	background-color: #444;
+}

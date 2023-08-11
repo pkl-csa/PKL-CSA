@@ -1,0 +1,707 @@
+@font-face {
+    font-family: "BSansL";
+    src: url(fonts/BloggerSans-LightItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "BSansM";
+    src: url(fonts/BloggerSans-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "GBook";
+    src: url(fonts/Garet-Book.ttf) format("truetype");
+}
+@font-face {
+    font-family: "GHeavy";
+    src: url(fonts/Garet-Heavy.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Glacial";
+    src: url(fonts/GlacialIndifference.ttf) format("truetype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F8F5F5;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+/* Hide the default scrollbar */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* TOPBAR */
+#sidebar{
+    background-color: #333333;
+    width: 100%;
+    height: 12vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+}
+#sidebar ul li.active a {
+    color: #C7BE65; /* Replace with your desired text color */
+    /* You can add any other styling here to make the active link stand out */
+}
+.sidebar-content{
+    display: flex;
+    flex-direction: row;
+    
+}
+.navlogo{
+    width: 12vh;
+    height: 12vh;
+}
+.sidebar-content ul {
+    list-style: none;
+    display: flex;
+}
+.sidebar-content ul li{
+    margin-left: 2vh;
+}
+.sidebar-content ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 2.5vh;
+    font-family: "GBook";
+    display: flex;
+    align-items: center;
+    transition: ease .2s;
+}
+.sidebar-content ul li a:hover{
+    letter-spacing: .1vh;
+    color:#C7BE65;
+}
+
+.navimg{
+    position: relative;
+    width: 3vh;
+    height: 3vh;
+    margin-right: 2vh;
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+    #sidebar {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+    }
+    
+    .navlogo {
+      margin-bottom: 15px;
+    }
+    
+    .sidebar-content {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .sidebar-content ul {
+      flex-direction: column;
+    }
+    
+    .sidebar-content ul li {
+      margin-left: 0;
+      margin-bottom: 10px;
+      margin-left: 12px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .columns-container {
+      grid-template-columns: 1fr; /* Set the columns to stack on top of each other */
+    }
+  }
+
+.columns-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.column h2{
+    text-align: center;
+}
+
+.column {
+    border: none;
+    padding: 10px;
+    align-items: center; /* Center the content horizontally */
+    position: relative; /* Add relative positioning to the parent container */
+}
+
+#contentPart {
+    display: flex;
+    flex-wrap: wrap; /* Allow the content containers to wrap to a new line when needed */
+    align-items: flex-start; /* Align the containers to the top of the parent div */
+    position: relative;
+    justify-content: center; /* Center the containers horizontally */
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+    margin: 20px;
+    padding: 30px;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 2;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.content-container1 {
+    display: flex;
+    flex-direction: column;
+    background-color: #F0F0F0;
+    margin: 20px;
+    padding: 30px;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-container .conimg {
+    width: 55%;
+    height: 35%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 2vh;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.content-container1 .conimg {
+    width: 55%;
+    height: 35%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 2vh;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.content-container .conimg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-container1 .conimg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content-container p {
+    margin: 0;
+    text-align: justify;
+    text-align-last: left;
+    font-family: "GBook";
+}
+
+.content-container1 p {
+    margin: 0;
+    text-align: justify;
+    text-align-last: left;
+    font-family: "GBook";
+}
+
+.content-container1 h1 {
+    margin: 0;
+    text-align: center;
+    font-family: "GBook";
+}
+
+.content-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #C7BE65;
+    padding: 10px;
+    width: 40%;
+    font-family: "GBook";
+    border-radius: 20px;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.content-container a:hover {
+    background-color: #777246;
+    transform: scale(1.1);
+}
+
+.content-container1 a {
+    text-decoration: none;
+    color: white;
+    background-color: #C7BE65;
+    padding: 10px;
+    width: 40%;
+    font-family: "GBook";
+    border-radius: 20px;
+    transition: .3s ease;
+    text-align: center;
+}
+
+.content-container1 a:hover {
+    background-color: #777246;
+    transform: scale(1.1);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center; /* Center the containers horizontally */
+    align-items: center; /* Center the containers vertically */
+}
+
+
+@media (max-width: 768px) {
+        /* Adjust the layout for smaller screens */
+        .content-container, .content-container1 {
+            width: 100%; /* Set the width to 100% for single column layout */
+        }
+    }
+
+.head {
+    font-size: 200%;
+    font-family: "GHeavy";
+    text-align: center;
+    margin-top: 2%;
+}
+  
+.slide-container .prev,
+.slide-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  text-decoration: none;
+}
+
+.slide-container .prev:hover,
+.slide-container .next:hover {
+  background-color: #777246;
+  color: white;
+}
+
+.slide-container .prev {
+  left: 2px;
+}
+
+.slide-container .next {
+  right: 2px;
+}
+
+.dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.dots-container .dot {
+  cursor: pointer;
+  margin: 5px;
+  width: 20px;
+  height: 20px;
+  color: #333;
+  border-radius: 50%;
+  background-color: #dfd6ce;
+  transition: background-color 0.3s ease;
+}
+
+.dots-container .dot.active {
+  background-color: #C7BE65;
+  transform: scale(1.2);
+}
+
+/* Media query for screens with a maximum width of 768px (typical for mobile devices) */
+@media screen and (max-width: 768px) {
+  .dots-container .dot {
+    width: 50px; /* Adjust the width of the dots for small screens */
+    height: 10px; /* Adjust the height of the dots for small screens */
+  }
+
+  .dots-container .dot.active {
+    transform: scale(1.3); /* Increase the size of the active dot for better visibility on small screens */
+  }
+}
+
+.slide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.slide-container .slide {
+  display: none;
+  width: 100%;
+}
+
+.slide-container .slide.fade {
+  animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+.slide-container .slide img {
+  width: 100%;
+}
+
+* {box-sizing: border-box}
+.mySlides1 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .previous, .nextt {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 40px !important; /* Adjust the width of the buttons */
+    height: 50px; /* Adjust the height of the buttons */
+    line-height: 30px; /* Vertically center the text inside buttons */
+    margin-top: -25px; /* Half of the button height to center vertically */
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5); /* Add a background color to the buttons */
+  }
+  
+  /* Position the "next button" to the right */
+  .nextt {
+    right: 0;
+  }
+  
+  /* On hover, add a grey background color */
+  .previous:hover, .nextt:hover {
+    background-color: #f1f1f1;
+    color: black;
+  }
+
+  .mySlides1 img {
+    border-radius: 8px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
+
+  .mySlides1 {
+    margin: 0;
+  }
+
+
+/*CALENDAR OF ACTIVITIES*/
+
+#contentPart1 {
+  display: flex;
+  flex-wrap: wrap; /* Allow the content containers to wrap to a new line when needed */
+  align-items: flex-start; /* Align the containers to the top of the parent div */
+  position: relative;
+  justify-content: center; /* Center the containers horizontally */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  background-color: #F0F0F0;
+  margin: 20px;
+  padding: 30px;
+  width: 27%; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  line-height: 2;
+  transition: max-height 0.5s ease;
+  overflow: hidden;
+}
+
+.centered-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.centered-text p {
+  margin: 0;
+  font-family: "GBook";
+  font-size: 3vh;
+ /* text-align: center;
+  text-align-last: center;*/
+}
+
+.content-container p {
+  margin: 0;
+  text-align: center;
+  text-align-last: center;
+  font-family: "GBook";
+  font-size: 3vh;
+}
+
+.content-container h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "GBook";
+}
+
+.centered-h1 {
+  margin: 0;
+  text-align: center;
+  font-family: "GBook";
+  /* Add any additional styles you want for the h1 element */
+}
+
+.button-wrapper {
+  display: flex; /* Use flexbox to center the button */
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 5%; /* Add some spacing between the paragraph and the button */
+}
+
+.content-container a {
+  text-decoration: none;
+  color: white;
+  background-color: #C7BE65;
+  padding: 10px;
+  width: 40%;
+  font-family: "GBook";
+  border-radius: 20px;
+  transition: .3s ease;
+  text-align: center;
+}
+
+.content-container a:hover {
+  background-color: #777246;
+  transform: scale(1.1);
+}
+
+.content-wrapper1 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; /* Center the containers horizontally */
+  align-items: center; /* Center the containers vertically */
+}
+
+@media (max-width: 900px) {
+      /* Adjust the layout for smaller screens */
+      .content-container, .calendar-container {
+          width: 100%; /* Set the width to 100% for single column layout */
+      }
+  }
+
+.head {
+  font-size: 200%;
+  font-family: "GHeavy";
+  text-align: center;
+  margin-top: 2%;
+}
+
+
+
+/* FOOTER */
+.footer {
+	width: 100%;
+	background: #444444;
+	display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+ .inner-footer {
+	 width: 95%;
+	 margin: auto;
+	 padding: 30px 10px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+.footer-items {
+	width: 30%;
+	padding: 1px 20px;
+	box-sizing: border-box;
+	color: gray;
+}
+
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: gray;
+  font-family: "GBook";
+}
+
+.footer-items h1 {
+	color: gray;
+  font-family: "GHeavy";
+}
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #C7BE65;
+	color: #C7BE65;
+	background-color: #C7BE65;
+	border: 0px;
+}
+
+ul {
+	list-style: none;
+	color: gray;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+  font-family: "GBook";
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: gray;
+	transition: 0.3s;
+}
+
+ul a:hover {
+	color: #C7BE65;
+}
+
+ul li {
+	margin: 10px 0;
+	height: 25px;
+}
+
+li i {
+	margin-right: 20px;
+}
+
+.footer-items a {
+	text-decoration: none;
+}
+
+.footer-items .f {
+	height: 30px;
+	width: 30px;
+  margin-top: 4vh;
+  margin-left: 2vh;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.footer-items .f:hover {
+	transform: scale(1.3);
+  color: #777246;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+  /* Apply styles for mobile devices */
+  .email-link {
+      pointer-events: none; /* Disable link click behavior */
+      cursor: default;
+  }
+}
+
+.go-top {
+	position: fixed;
+	bottom: 2em;
+	right: 2em;
+	text-decoration: none;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.3);
+	font-size: 15px;
+	padding: 1em;
+	display: none;
+    font-family: "GBook";
+    transition: background-color 0.3s ease-in-out;
+}
+
+.go-top:hover {
+	background-color: #444;
+}
+
+.brdr1 {
+  background-color: #C7BE65;
+  padding: 0 20px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.brdr2 {
+  background-color: #777246;
+  padding: 0 20px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+.brdr3 {
+  background-color: #C7BE65;
+  padding: 0 20px;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
