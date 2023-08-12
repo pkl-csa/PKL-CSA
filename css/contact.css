@@ -418,7 +418,7 @@ ul li {
 
 .highlight-container {
   background-color: rgba(68, 68, 68, 0.5); /* Highlighted container color with more transparency */
-  box-shadow: 0 0 12px rgba(199, 190, 101, 0.6); /* Adjust the box shadow for the highlighted container */
+  box-shadow: 0 0 12px rgba(68, 68, 68, 0.5); /* Adjust the box shadow for the highlighted container */
   transform: scale(1.05); /* Slightly increase size on highlight */
 }
 
