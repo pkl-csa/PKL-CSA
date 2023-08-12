@@ -368,28 +368,11 @@ ul li {
   align-items: center; /* Center the containers vertically */
 }
 
-@media (max-width: 900px) {
-      /* Adjust the layout for smaller screens */
-      .content-container1 {
-          width: 100%; /* Set the width to 100% for single column layout */
-      }
-  }
-
 .head {
   font-size: 200%;
   font-family: "GHeavy";
   text-align: center;
   margin-top: 2%;
-}
-
-.brdr1 {
-  background-color: #C7BE65;
-  padding: 0 20px;
-  
-  display: inline-block;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: left;
 }
 
 .check {
