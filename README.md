@@ -5,7 +5,7 @@ Welcome to the **PKL-CSA Website** repository! This project showcases a website 
 ---
 
 ## 🌐 Live Demo
-[Visit the Website](https://your-live-demo-link.com) *(Add your live deployment link if available.)*
+[Visit the Website](https://pkl-csa.github.io/PKL-CSA/)
 
 ---
 
@@ -22,7 +22,6 @@ Welcome to the **PKL-CSA Website** repository! This project showcases a website 
 - **HTML5**: For semantic and structured content.
 - **CSS3**: For styling and layout design.
 - **JavaScript**: For interactivity and dynamic behavior.
-- *(Add any additional libraries, frameworks, or tools you used, e.g., React, Bootstrap, etc.)*
 
 ---
 
